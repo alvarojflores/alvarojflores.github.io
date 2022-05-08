@@ -1,0 +1,110 @@
+.brand-colors{ 
+  color: #0c1624 rgba(12, 22, 36, 1);
+  color: #0a121d rgba(10, 18, 29, 1);
+  color: #f3e9db rgba(243, 233, 219, 1);
+  color: #2790a5 rgba(39, 144, 165, 1);
+  color: #1f7384 rgba(31, 115, 132, 1);
+  color: #d86f5a rgba(216, 111, 90, 1);
+}
+body,
+html {
+  height: 100%;
+  color: #0c1624 !important;
+}
+body{
+  background-image: url("../img/endless-constellation.svg");
+  background-attachment: fixed;
+}
+.btn-square-md {
+  width: 100px;
+  height: 100px;
+  font-size: 3.4rem;
+}
+.btn-light:hover i {
+  color: #2790a5;
+}
+.claro {
+  color: #cc2229;
+}
+.tigo {
+  color: #00377b;
+}
+.correo-e {
+  color: #cc2229;
+}
+.messenger {
+  color: #006AFF;
+}
+.telegram {
+  color: #0088CC;
+}
+.whatsapp {
+  color: #128C7E;
+}
+.orange{
+  color: #d86f5a;
+}
+.yellow{
+  color: darkgoldenrod;
+}
+#contact-app {
+  background: linear-gradient(rgba(165, 79, 36, 0.5), rgba(12, 22, 36, 0.90)), url(../img/background-01.webp) no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+}
+.avatar {
+  width: 10rem;
+  border-radius: 50%;
+  margin: 1rem;
+}
+.card {
+  display: flex;
+  overflow: hidden;
+}
+.card, .card-ba {
+  padding: 15px;
+  border: none;
+}  
+.card img {
+  position: relative;
+  width: 100%;
+  top: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover img{
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+  transform-origin: center;
+}
+.card .card-body {
+  position:absolute;
+  bottom: 0px;
+  opacity: 0;
+  transition:  all 0.3s;
+  transition-delay: 0.1s;
+}
+.card:hover .card-body{
+  bottom:40%;
+  opacity: 1;
+  transition-delay: 0s;
+}
+/*Background and Font color*/
+.bg-color-1 {background-color: #0a121d;}
+.bg-color-2 {background-color: #1f7384;}
+.bg-color-3 {background-color: #f3e9db;}
+.bg-color-3-t {background-color: rgba(243, 233, 219,.66);}
+.bg-color-4 {background-color: #2790a5;}
+.bg-color-5 {background-color: #d86f5a;}
+.txt-color-1 {
+  color: #1f7384;
+}
+.txt-color-2 {
+  color: #0a121d;
+}
+.txt-color-3 {
+  color: #f3e9db;
+}
