@@ -1,13 +1,9 @@
 /* X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 300px) {
-  /* CSS */
-  /*footer*/
-  
-}
-
-/* X-Small devices (portrait phones, less than 576px) */
 @media (min-width: 576px) {
   /* CSS */
+  .avatar{
+    width: 7.5rem;
+  }
   .persona{
     display:none;
   }
@@ -38,19 +34,6 @@
 }
 
 /* Medium devices (portrait tablets, less than 992px) */
-@media (min-width: 992px) {
-  /* CSS */ 
-  .persona{
-    display: inline-block;
-  }
-  .btn-square-md {
-    width: 100px;
-    height: 100px;
-    font-size: 3.4rem;
-  }
-}
-
-/* Medium devices (landscape tablets, less than 992px) */
 @media (min-width: 992px) {
   /* CSS */ 
   .persona{
