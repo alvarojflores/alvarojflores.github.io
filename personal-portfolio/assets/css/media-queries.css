@@ -1,0 +1,74 @@
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 300px) {
+  /* CSS */
+  /*footer*/
+  
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 576px) {
+  /* CSS */  
+  .persona{
+    display: none;
+  }
+  .btn-square-md {
+    width: 50px;
+    height: 50px;
+    font-size: 1.7rem;
+  }
+  /*footer*/
+  
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  /* CSS */
+  #contact-app {
+    height: 100vh;
+    position: relative;
+  }
+  /*footer*/
+  
+}
+
+/* Medium devices (portrait tablets, less than 992px) */
+@media (min-width: 992px) {
+  /* CSS */ 
+  .persona{
+    display: inline-block;
+  }
+  .btn-square-md {
+    width: 100px;
+    height: 100px;
+    font-size: 3.4rem;
+  }
+}
+
+/* Medium devices (landscape tablets, less than 992px) */
+@media (min-width: 992px) {
+  /* CSS */ 
+  .persona{
+    display: inline-block;
+  }
+  .btn-square-md {
+    width: 100px;
+    height: 100px;
+    font-size: 3.4rem;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1200px) {
+  /* CSS */
+}
+
+/* X-Large devices (large desktops, more than 1400px) */
+@media (min-width: 1400px) {
+  /* CSS */
+  
+  /*footer*/
+  
+}
+
+/* XX-Large devices (larger desktops)
+No media query since the xxl breakpoint has no upper bound on its width */
