@@ -15,6 +15,10 @@ body{
   background-image: url("../img/endless-constellation.svg");
   background-attachment: fixed;
 }
+.btn > h1 {
+  margin: 0;
+  line-height: inherit;
+}
 .btn-square-md {
   width: 100px;
   height: 100px;
