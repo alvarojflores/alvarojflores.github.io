@@ -1,0 +1,161 @@
+:root {
+  --bs-primary: #204f71;
+  --bs-secondary: #0e4c59;
+  --bs-success: #2790a5;
+  --bs-danger: #d86f5a;
+  --bs-light: #f2e8da;
+  --bs-dark: #0c1624;
+  --bs-primary-rgb: 32,79,113;
+  --bs-secondary-rgb: 14,76,89;
+  --bs-success-rgb: 39,144,165;
+  --bs-danger-rgb: 216,111,90;
+  --bs-light-rgb: 242,232,218;
+  --bs-dark-rgb: 12,22,36;
+  --bs-white-rgb: 255,255,255;
+  --bs-black-rgb: 0,0,0;
+}
+/* BRANDS COLORS */
+.claro {
+    color: #cc2229;
+}
+.tigo {
+    color: #00377b;
+}
+.messenger {
+    color: #006AFF;
+}
+.telegram {
+    color: #0088CC;
+}
+.whatsapp {
+    color: #128C7E;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+}
+#appContact{
+  z-index: 200;
+  display: flex;
+  position: fixed;
+  flex-wrap: nowrap;
+  height: 100vh;
+  max-height:max-content;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 100vh;
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 0.75), rgba(var(--bs-light-rgb), 0.5)), url(../img/wide/iot.webp);
+  background-size: cover;
+}
+#appContactH, #appContactF, .btn-light, .btn-light:hover {
+	background-color: var(--bs-light);
+}
+.avatar {
+    width: 10rem;
+    border-radius: 50%;
+	background-color: #fff;
+}
+#mainContent{
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-light-rgb), 1))
+	
+}
+/* Botones */
+#btn-back-to-top {
+	z-index: 150;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+}
+.btn-light:hover i {
+    color: #2790a5;
+}
+#appContactClose{
+	border-radius: 0;
+}
+#appContactCollapse{
+	z-index: 150;
+	border-radius: 0 0 .25rem .25rem !important;
+}
+.btn-danger{
+	background-color: var(--bs-danger);
+	border-color: var(--bs-danger);
+}
+.btn-success{
+	background-color: var(--bs-success);
+	border-color: var(--bs-success);
+}
+.btn-square-md {
+    width: 100px;
+    height: 100px;
+    font-size: 3.4rem;
+}
+.card {
+  display: flex;
+  overflow: hidden;
+}
+.card, .card-ba {
+  padding: 15px;
+  border: none;
+}  
+.card img {
+  position: relative;
+  width: 100%;
+  top: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover img{
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+  transform-origin: center;
+}
+.card .card-body {
+	z-index: 100;
+  position:absolute;
+  bottom: 0px;
+  opacity: 0;
+  transition:  all 0.3s;
+  transition-delay: 0.1s;
+}
+.card:hover .card-body{
+  bottom:40%;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.dgrafico{
+	background-color:var(--bs-danger);
+}
+.dweb{
+	background-color: var(--bs-secondary);
+	color: var(--bs-light);
+}
+.emmedia{
+	background-color: var(--bs-success);
+}
+/* Image Comparison Slider*/
+.antes, .despues {
+  margin: 0;
+}
+
+.antes figcaption,
+.despues figcaption {
+  background:var(--bs-light);
+  border: 1px solid var(--bs-dark);
+  border-radius: 15px;
+  opacity: 0.8;
+  padding: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 100%;
+}
+
+.antes figcaption {
+  left: 12px;
+}
+
+.despues figcaption {
+  right: 12px;
+}

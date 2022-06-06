@@ -1,0 +1,36 @@
+img-comparison-slider {
+  visibility: hidden;
+}
+
+img-comparison-slider [slot='second'] {
+  display: none;
+}
+
+img-comparison-slider.rendered {
+  visibility: inherit;
+}
+
+img-comparison-slider.rendered [slot='second'] {
+  display: unset;
+}
+
+.before,
+.after {
+  margin: 0 auto;
+}
+
+.before figcaption,
+.after figcaption {
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 12px;
+  color: #2e3452;
+  opacity: 0.8;
+  padding: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 100%;
+}
