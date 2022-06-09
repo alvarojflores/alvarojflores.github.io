@@ -30,12 +30,12 @@
   <!-- Back to top button -->
   <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top"><i class="fas fa-arrow-up"></i></button>
   <div class="row">
-    <div id="appContact" class="col-md-4 offcanvas-collapse" data-bs-backdrop="static">
+    <div id="appContact" class="col-md-4 offcanvas-collapse" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1">
       <div class="col-12 d-flex flex-column flex-shrink-0 p-0">
-        <div id="appContactH" class="mx-0 mb-2 text-center rounded-bottom">
-          <button class="btn btn-danger float-end" type="button" id="appContactClose" aria-label="Toggle navigation"><i class="fas fa-times"></i>
-          </button>
-          <img src="assets/img/brand/icono-C.svg" alt="User avatar" class="avatar mt-1">
+          <div id="appContactH" class="mx-0 mb-2 text-center rounded-bottom">
+            <button class="btn btn-danger rounded-0 rounded-start float-start" type="button" id="appContactCollapse" aria-label="Toggle navigation"><i class="far fa-comments"></i></button>
+            <button class="btn btn-danger float-end" type="button" id="appContactClose" aria-label="Toggle navigation"><i class="fas fa-times"></i></button>
+          <img src="assets/img/brand/icono-C.svg" alt="User avatar" class="avatar mt-1" width="10rem">
           <div class="col persona">
               <p class="display-6 mb-1">Always Join Freedom! &trade;</p>
               <p class="mb-1">Diseño Gráfico, Multimedia y Web</p>
@@ -67,40 +67,31 @@
       </div>
     </div>
     <div id="mainContent" class="col-12 col-md-8 offset-md-4">
-        <button class="btn btn-success container-fluid fixed-top" type="button" id="appContactCollapse" aria-label="Toggle navigation"><i class="far fa-comments me-2"></i>Comentarios. Consultas. Sugerencias.
-        </button>
-        <h1 class="my-5 py-5 text-center bg-light">Nuestros Servicios</h1>
-        <div class="card col-12 mb-4 p-3 dweb">
-          <div class="p-3 mb-0">
-              <blockquote class="blockquote">
-                  <h3>Web</h3>
-                  <p>Este proyecto fue posible a través del apoyo del W3C y la persistencia en buscar una mejor forma de desarrollar ideas para la W3. En consecuencia, agradezco la inclusión en tan loable proyecto.</p>
-              </blockquote>
-          </div>
+        <h1 class="mb-5 py-5 text-center bg-light">Nuestros Servicios</h1>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden bg-dark rounded-5" style="background-image: url('assets/img/square/dgrafico.webp');background-size: cover; background-position: center center;">
+                    <div class="d-flex flex-column h-100 p-5">
+                        <h2 class="py-5 my-auto display-6 lh-1 fw-bold"><span class="bg-dark text-light">Diseño </span><span class="bg-light text-dark">Gráfico</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5" style="background-image: url('assets/img/square/audio-video-editing.webp');background-size: cover; background-position: center center;">
+                    <div class="d-flex flex-column h-100 p-5">
+                        <h2 class="py-5 my-auto display-6 lh-1 fw-bold"><span class="bg-dark text-light">Edición </span><span class="bg-light text-dark">Audiovisual</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white rounded-5" style="background-image: url('assets/img/square/dweb.webp');background-size: cover; background-position: center center;">
+                    <div class="d-flex flex-column h-100 p-5 text-shadow-1">
+                        <h2 class="py-5 my-auto display-6 lh-1 fw-bold"><span class="bg-dark text-light">Diseño </span><span class="bg-light text-dark">Web</span></h2>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6 mb-4">
-              <div class="card p-3 emmedia">
-                  <div class="p-3 mb-0">
-                      <blockquote class="blockquote">
-                          <h3>Edición Audiovisual</h3>
-                          <p>Cuando haces uso de una aplicación móvil o en línea para la creación o distribución contenido, siempre hay que hacer retoques a los medios para garantizar una rápida carga sin afectar la carga simultánea de otros elementos en la página web.</p>
-                      </blockquote>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-12 col-lg-6 mb-4">
-              <div class="card p-3 dgrafico">
-                  <div class="p-3 mb-0">
-                      <blockquote class="blockquote">
-                          <h3>Edición Gráfica</h3>
-                          <p>El diseño gráfico permite crear y editar los materiales de mercadeo de una empresa, incluidos los materiales impresos y digitales. Esto incluye además, la creación de conceptos visuales y la ejecución de trabajos de diseño para varias campañas de mercadeo.</p>
-                      </blockquote>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <h1 class="my-5 py-5 text-center bg-light">Trabajos Recientes</h1>        
+        <h1 class="my-5 py-5 text-center bg-light">Trabajos Recientes</h1>
         <div class="grid row mt-5 g-3" data-masonry='{"percentPosition": true }'>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card dgrafico">
@@ -110,7 +101,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +114,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +142,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -164,7 +155,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -177,7 +168,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -190,7 +181,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -203,7 +194,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -216,7 +207,7 @@
                             <div class="col-6 text-center">
                                 <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                             </div>
-                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -259,168 +250,168 @@
                         <div class="col-6 text-center">
                             <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
+                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/square/cyberzone-logo-S.webp" alt="Cyber Zone Chinandega">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/square/cyberzone-logo-S.webp" alt="Cyber Zone Chinandega">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/tall/yo-amo-nicaragua-sacuanjoche-S.webp" alt="Nicaragua Sacuanjoche">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/tall/yo-amo-nicaragua-sacuanjoche-S.webp" alt="Nicaragua Sacuanjoche">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/tall/yo-amo-nicaragua-macho-raton-S.webp" alt="Nicaragua Macho Ratón">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/tall/yo-amo-nicaragua-macho-raton-S.webp" alt="Nicaragua Macho Ratón">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/tall/boda-jalison-S.webp" alt="Boda Jorge & Allison">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/tall/boda-jalison-S.webp" alt="Boda Jorge & Allison">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/square/orquideario-la-paz-logo-S.webp" alt="Orquideario La Paz">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/square/orquideario-la-paz-logo-S.webp" alt="Orquideario La Paz">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/square/chintien-restaurante-logo-S.webp" alt="Chintien Restaurante">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/square/chintien-restaurante-logo-S.webp" alt="Chintien Restaurante">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/square/variedades-nashly-banner-S.webp" alt="Banner Variedades Nashly">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/square/variedades-nashly-banner-S.webp" alt="Banner Variedades Nashly">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/tall/yo-amo-nicaragua-nacatamal-S.webp" alt="Nicaragua Nacatamal">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/tall/yo-amo-nicaragua-nacatamal-S.webp" alt="Nicaragua Nacatamal">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/square/gamestop-logo-S.webp" alt="Game Stop Chinandega">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/square/gamestop-logo-S.webp" alt="Game Stop Chinandega">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-8 col-lg-6">
-            <div class="card dgrafico">
-                <img src="assets/img/wide/quimicos-martinez-logo-S.webp" alt="Quimar">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-md-8 col-lg-6">
+                <div class="card dgrafico">
+                    <img src="assets/img/wide/quimicos-martinez-logo-S.webp" alt="Quimar">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card dgrafico">
-                <img src="assets/img/tall/yo-amo-nicaragua-guardabarranco-S.webp" alt="Nicaragua Guardabarranco">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card dgrafico">
+                    <img src="assets/img/tall/yo-amo-nicaragua-guardabarranco-S.webp" alt="Nicaragua Guardabarranco">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-8 col-lg-6">
-            <div class="card dgrafico">
-                <img src="assets/img/wide/ciberzone-gamestop-chinandega-banner-S.webp" alt="Banner Cyber Zone Chinandega">
-                <div class="card-body bg-light fixed-bottom">
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+            <div class="col-md-8 col-lg-6">
+                <div class="card dgrafico">
+                    <img src="assets/img/wide/ciberzone-gamestop-chinandega-banner-S.webp" alt="Banner Cyber Zone Chinandega">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <i class="fas fa-pencil-alt whatsapp"></i><i class="fas fa-ruler whatsapp"></i>
+                            </div>
+                            <div class="col-6 text-center"><a href="#" class="btn btn-outline-success disabled" role="button"><i class="fas fa-search-plus"></i></a></div>
                         </div>
-                        <div class="col-6 text-center"><a href="#" class="btn btn-outline-success" role="button"><i class="fas fa-search-plus"></i></a></div>
                     </div>
                 </div>
             </div>
         </div>
-            </div>
     </div>
   </div>
   <!-- Java Scripts -->
