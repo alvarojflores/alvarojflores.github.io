@@ -75,7 +75,9 @@ p{
     color: #2790a5;
 }
 #appContactClose{
-	border-radius: 0;
+  position:relative;
+  margin-left: -13px;
+  margin-top: 60px;
 }
 #appContactCollapse{
   position:relative;
@@ -114,7 +116,7 @@ p{
   overflow-y: auto;
 }
 /* ICON ANIMATION */
-.far.fa-comments{
+.fa-comments, .fa-times{
   animation: 1.5s ease 0s infinite beat;
 }
 @keyframes beat {
