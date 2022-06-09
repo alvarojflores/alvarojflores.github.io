@@ -80,7 +80,7 @@ p{
 #appContactCollapse{
   position:relative;
   margin-left: -56px;
-  margin-top: 33%;
+  margin-top: 75px;
 }
 .btn-danger,.btn-danger:hover,.btn-success,.btn-success:hover{
   color: var(--bs-light);
