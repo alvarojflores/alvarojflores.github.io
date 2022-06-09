@@ -33,26 +33,31 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+p{
+  display: inline-block;
+}
 #appContact{
   z-index: 200;
   display: flex;
   position: fixed;
   flex-wrap: nowrap;
   height: 100vh;
-  max-height:max-content;
-  overflow-x: auto;
-  overflow-y: hidden;
+  max-height: max-content;
   min-height: 100vh;
   background: linear-gradient(rgba(var(--bs-dark-rgb), 0.75), rgba(var(--bs-light-rgb), 0.5)), url(../img/wide/iot.webp);
   background-size: cover;
 }
-#appContactH, #appContactF, .btn-light, .btn-light:hover {
-	background-color: var(--bs-light);
+#appContactH, #appContactF{
+	background-color: rgba(var(--bs-dark-rgb),.90);
+  color: var(--bs-light);
+}
+.btn-light, .btn-light:hover{
+  background-color: var(--bs-light);
 }
 .avatar {
-    width: 10rem;
-    border-radius: 50%;
-	background-color: #fff;
+  width: 10rem;
+  border-radius: 50%;
+	background-color: var(--bs-light);
 }
 #mainContent{
   background: linear-gradient(rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-light-rgb), 1))
@@ -73,21 +78,44 @@
 	border-radius: 0;
 }
 #appContactCollapse{
-	z-index: 150;
-	border-radius: 0 0 .25rem .25rem !important;
+  position:relative;
+  margin-left: -56px;
 }
-.btn-danger{
+.btn-danger,.btn-danger:hover,.btn-success,.btn-success:hover{
+  color: var(--bs-light);
+}
+.btn-danger,.btn-danger.active,.btn-danger:active{
 	background-color: var(--bs-danger);
 	border-color: var(--bs-danger);
 }
-.btn-success{
+.btn-danger:hover{
+  background-color:rgba(var(--bs-success-rgb),.90);
+	border-color: var(--bs-success);
+}
+.btn-danger:focus,.btn-success:focus{
+  box-shadow:none;
+}
+.btn-success,.btn-success.active,.btn-success:active{
 	background-color: var(--bs-success);
 	border-color: var(--bs-success);
+}
+.btn-success:hover{
+  background-color:rgba(var(--bs-danger-rgb),.90);
+	border-color: var(--bs-danger);
 }
 .btn-square-md {
     width: 100px;
     height: 100px;
     font-size: 3.4rem;
+}
+/* ICON ANIMATION */
+.far.fa-comments{
+  animation: 1.5s ease 0s infinite beat;
+}
+
+@keyframes beat {
+  0%, 50%, 100% { transform: scale(1.5, 1.5); }
+  30%, 80% { transform: scale(1, 1); }
 }
 .card {
   display: flex;
