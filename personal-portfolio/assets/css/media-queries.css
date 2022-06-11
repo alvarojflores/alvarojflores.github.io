@@ -1,0 +1,58 @@
+/* X-Small devices (portrait phones, less than 576px)
+/* No media query for `xs` since this is the default in Bootstrap
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .avatar {
+    width: 7.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  #appContactCollapse, #appContactClose{
+    display: none;
+  }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { /**/ }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { /**/ }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { /**/ }
+
+/* `xs` returns only a ruleset and no media query
+... { ... }
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) and (orientation: landscape) { /**/
+  .display-6 {
+    font-size: calc(2vw);
+  }
+}
+/* `md` applies to small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+  #appContact {
+    left: 100%;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+}
+  #appContact.open{
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+  .hidden-sm{
+    display: none;
+    visibility: collapse;
+    }
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) { /**/ }
+
+/* `xl` applies to large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) { /**/ }
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { /**/ }
