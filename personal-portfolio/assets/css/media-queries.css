@@ -43,6 +43,7 @@
     transform: translateX(-100%);
   }
   .hidden-sm{
+    position: fixed;
     display: none;
     visibility: collapse;
     }
