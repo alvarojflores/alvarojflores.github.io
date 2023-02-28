@@ -152,6 +152,9 @@ p{
   transform: translateY(-50%);
   line-height: 100%;
 }
+.bavertical > figure{
+  margin: 0px;
+}
 .despues figcaption {
   right: 1px;
 }
