@@ -100,7 +100,35 @@
             </div>
         </div>
         <h1 class="my-5 py-5 text-center bg-light">Trabajos Recientes</h1>
+        <!-- GALERÍA DE IMÁGENES -->
         <div class="grid row mt-5 g-3" data-masonry='{"percentPosition": true }'>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <!-- Modal -->
+                <div class="modal fade" id="gmfLogo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Logotipo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="assets/img/square/glenda-maria-flores-logo-L.webp" class="img-fluid" alt="Glenda María Flores">
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" type="button" class="btn btn-secondary disabled"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-danger">
+                    <img src="assets/img/square/glenda-maria-flores-logo-S.webp" alt="Glenda María Flores">
+                    <div class="card-body bg-light fixed-bottom">
+                        <div class="row">
+                            <div class="text-center"><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#gmfLogo"><i class="fas fa-search-plus"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <!-- Modal -->
                 <div class="modal fade" id="ginerosaLogo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -288,33 +316,6 @@
                     <div class="card-body bg-light fixed-bottom">
                         <div class="row">
                             <div class="text-center"><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#maybellyLogo"><i class="fas fa-search-plus"></i></button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <!-- Modal -->
-                <div class="modal fade" id="maybellyBanner" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Banner</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="assets/img/tall/maybely-nails-banner-L.webp" class="img-fluid" alt="Maybelly Nails Banner">
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" type="button" class="btn btn-secondary disabled"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-danger">
-                    <img src="assets/img/tall/maybely-nails-banner-S.webp" alt="Maybelly Nails Banner">
-                    <div class="card-body bg-light fixed-bottom">
-                        <div class="row">
-                            <div class="text-center"><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#maybellyBanner"><i class="fas fa-search-plus"></i></button></div>
                         </div>
                     </div>
                 </div>
@@ -689,33 +690,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 col-lg-6">
-                <!-- Modal -->
-                <div class="modal fade" id="czgsBanner" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Banner</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="assets/img/wide/ciberzone-gamestop-chinandega-banner-L.webp" class="img-fluid" alt="Banner Cyber Zone Chinandega">
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" type="button" class="btn btn-secondary disabled"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card bg-danger">
-                    <img src="assets/img/wide/ciberzone-gamestop-chinandega-banner-S.webp" alt="Banner Cyber Zone Chinandega">
-                    <div class="card-body bg-light fixed-bottom">
-                        <div class="row">
-                            <div class="text-center"><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#czgsBanner"><i class="fas fa-search-plus"></i></button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
   </div>
@@ -726,7 +700,7 @@
   <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
   <script src="assets/js/lib/imagesloaded.pkgd.min.js"></script>
   <script src="assets/js/lib/masonry.pkgd.min.js"></script>
-  <script src="assets/js/lib/img-comparison-slider-7.8.1.js"></script>
+  <script src="assets/js/lib/img-comparison-slider-8.0.0.js"></script>
   <!-- Custom Scripts -->
   <script src="assets/js/navbarSideCollapse.js"></script>
   <script src="assets/js/scrollTop.js"></script>
