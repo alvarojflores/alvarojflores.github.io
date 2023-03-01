@@ -46,7 +46,7 @@ p{
   height: 100vh;
   max-height: max-content;
   min-height: 100vh;
-  background: linear-gradient(rgba(var(--bs-light-rgb), 0.75), rgba(var(--bs-success-rgb), 0.75)), url(../img/wide/iot.webp);
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 0.75), rgba(var(--bs-success-rgb), 0.75)), url(../img/wide/iot.webp);
   background-size: cover;
 }
 #brand{
@@ -82,7 +82,7 @@ p{
   border-radius: .5rem !important;
 }
 #mainContent{
-  background: linear-gradient(rgba(var(--bs-light-rgb), 1), rgba(var(--bs-success-rgb), 1))
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-success-rgb), 1))
 	
 }
 /* Botones */
