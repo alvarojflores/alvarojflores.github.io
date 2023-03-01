@@ -82,7 +82,7 @@ p{
   border-radius: .5rem !important;
 }
 #mainContent{
-  background: linear-gradient(rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-primary-rgb), 1))
+  background: linear-gradient(rgba(var(--bs-light-rgb), 1), rgba(var(--bs-success-rgb), 1))
 	
 }
 /* Botones */
