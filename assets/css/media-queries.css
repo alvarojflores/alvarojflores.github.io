@@ -49,6 +49,9 @@
     display: none;
     visibility: collapse;
     }
+    .p-5{
+      padding: 0.5rem !important;
+    }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px)*/
