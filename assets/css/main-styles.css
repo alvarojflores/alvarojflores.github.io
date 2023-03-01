@@ -118,7 +118,7 @@ p{
 }
 @keyframes beat {
   0%, 50%, 100% { transform: scale(1.5, 1.5); }
-  30%, 80% { transform: scale(1, 1); }
+  30%, 70% { transform: scale(1, 1); }
 }
 .modal-dialog{
   max-width: fit-content;
@@ -127,7 +127,7 @@ p{
   display: flex;
   overflow: hidden;
 }
-.card, .card-ba {
+.card {
   padding: 15px;
   border: none;
 }  
@@ -139,9 +139,6 @@ p{
 	z-index: 100;
   position:absolute;
   bottom: 0px;
-}
-.emmedia{
-	background-color: var(--bs-success);
 }
 /* Image Comparison Slider*/
 .bavertical figcaption {
