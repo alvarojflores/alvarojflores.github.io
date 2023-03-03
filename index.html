@@ -111,13 +111,13 @@
                 <!-- Modal -->
                 <div class="modal fade" id="ajfYTShort" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content" style="height: 100vh;">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="staticBackdropLabel">Video<i class="fab fa-youtube ms-2 claro"></i></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body embed-responsive embed-responsive-16by9">
-                                <iframe style="height: 100vh;" src="https://www.youtube.com/embed/5WE7k3L-Igo" title="movil publicidad estado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <div class="modal-body">
+                                <iframe style="height: 100%;" src="https://www.youtube.com/embed/5WE7k3L-Igo" title="Publicidad Vertical" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="modal-footer">
                                 <a href="#" type="button" class="btn btn-secondary disabled"><i class="fas fa-link"></i></a>
@@ -759,14 +759,25 @@
   <script src="assets/js/navbarSideCollapse.js"></script>
   <script src="assets/js/scrollTop.js"></script>
   <script>
-      // init Masonry
-      var $grid = $('.grid').masonry({
-          // options...
-      });
-      // layout Masonry after each image loads
-      $grid.imagesLoaded().progress( function() {
-          $grid.masonry('layout');
-      });
+    // init Masonry
+    var $grid = $('.grid').masonry({
+        // options...
+    });
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+    });
+    /*
+    YouTube video clear source on close modal
+    */
+    var videoSrc = $("#ajfYTShort iframe").attr("src");
+    $('#ajfYTShort').on('show.bs.modal', function () { // on opening the modal
+        // set the video to autostart
+        $("#ajfYTShort iframe").attr("src", videoSrc+"?autoplay=1");
+    }).on('hidden.bs.modal', function (e) { // on closing the modal
+        // stop the video
+        $("#ajfYTShort iframe").attr("src", null);
+    });
   </script>
 </body>
 </html>
