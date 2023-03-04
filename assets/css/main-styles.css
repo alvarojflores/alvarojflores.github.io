@@ -120,6 +120,10 @@ p{
   0%, 50%, 100% { transform: scale(1.5, 1.5); }
   30%, 70% { transform: scale(1, 1); }
 }
+/*viewport Width/Height*/
+.vh-33{
+  height: 33vh;
+}
 .modal-dialog{
   max-width: fit-content;
 }
