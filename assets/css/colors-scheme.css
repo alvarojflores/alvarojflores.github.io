@@ -1,0 +1,19 @@
+:root {
+    --bs-primary: #1F5072;
+    --bs-secondary: #1E4D5A;
+    --bs-success: #278FA5;
+    --bs-danger: #DE6D54;
+    --bs-light: #F0EBE1;
+    --bs-dark: #0E1725;
+    --bs-primary-rgb: 31, 80, 114;
+    --bs-secondary-rgb: 30, 77, 90;
+    --bs-success-rgb: 39, 143, 165;
+    --bs-danger-rgb: 222, 109, 84;
+    --bs-light-rgb: 240, 235, 225;
+    --bs-dark-rgb: 14, 23, 37;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-link-color: #278FA5;
+    --bs-link-hover-color: #1E4D5A;
+    --bs-highlight-bg: #F0EBE1;
+  }

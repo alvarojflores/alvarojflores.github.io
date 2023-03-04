@@ -1,0 +1,154 @@
+/* BRANDS COLORS */
+.claro {
+    color: #cc2229;
+}
+.tigo {
+    color: #00377b;
+}
+.messenger {
+    color: #006AFF;
+}
+.telegram {
+    color: #0088CC;
+}
+.whatsapp {
+    color: #128C7E;
+}
+.html5{
+  color: #e34c26;
+}
+.css3{
+  color: #3c99dc;
+}
+.javascript{
+  color: #e5a126;
+}
+.wpress{
+  color: #00749c;
+}
+* {
+  font-family: 'Poppins', sans-serif;
+}
+p{
+  display: inline-block;
+}
+#jumbotron{
+  background-image: url(../img/brand/logo-sketch-paint.webp);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+}
+#appContact{
+  z-index: 200;
+  display: flex;
+  position: fixed;
+  flex-wrap: nowrap;
+  height: 100vh;
+  max-height: max-content;
+  min-height: 100vh;
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 0.75), rgba(var(--bs-success-rgb), 0.75)), url(../img/wide/iot.webp);
+  background-size: cover;
+}
+#brand{
+  margin-top: -98px;
+}
+.bg-light-t{
+  background-color: rgba(var(--bs-primary-rgb),.75);
+}
+.txt-light{
+  color: var(--bs-light);
+}
+.txt-success{
+  color: var(--bs-success);
+}
+.txt-danger{
+  color: var(--bs-danger);
+}
+.txt-dark{
+  color: var(--bs-dark);
+}
+#appContactH, #appContactF{
+	background-color: rgba(var(--bs-dark-rgb),.90);
+}
+.btn-light, .btn-light:hover{
+  background-color: var(--bs-light);
+}
+.avatar {
+  width: 10rem;
+  border-radius: 50%;
+	background-color: var(--bs-light);
+}
+.rounded-5{
+  border-radius: .5rem !important;
+}
+#mainContent{
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-success-rgb), 1))
+	
+}
+/* Botones */
+#btn-back-to-top {
+	z-index: 150;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+}
+.btn-light:hover i {
+    color: #2790a5;
+}
+#appContact-btnGroup{
+  margin-left: -55px;
+  margin-top: 60px;
+}
+.btn-danger:focus,.btn-success:focus{
+  box-shadow:none;
+}
+.btn-square-md {
+    width: 100px;
+    height: 100px;
+    font-size: 3.4rem;
+}
+/* OFFCANVAS SIDENAV */
+.scrollarea {
+  overflow-y: auto;
+}
+/* ICON ANIMATION */
+.fa-comments, .fa-times{
+  animation: 1.5s ease 0s infinite beat;
+}
+@keyframes beat {
+  0%, 50%, 100% { transform: scale(1.5, 1.5); }
+  30%, 70% { transform: scale(1, 1); }
+}
+.modal-dialog{
+  max-width: fit-content;
+}
+.card {
+  display: flex;
+  overflow: hidden;
+  border: none;
+}
+.card img {
+  position: relative;
+  width: 100%;
+}
+.card .card-body {
+	z-index: 100;
+  position:absolute;
+  bottom: 0px;
+}
+/* Image Comparison Slider*/
+.bavertical figcaption {
+  background-color: rgba(var(--bs-light-rgb), 0.75);
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 100%;
+}
+.bavertical > figure{
+  margin: 0px;
+}
+.despues figcaption {
+  right: 1px;
+}
