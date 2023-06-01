@@ -1,0 +1,206 @@
+html,
+body {
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 1), rgba(var(--bs-success-rgb), 1));
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  min-height: 100vh;
+}
+.overflowHidden{
+  overflow: hidden;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: rgba(var(--bs-light-rgb), .85);
+  transition:all .5s ease-in-out;
+}
+.footer{
+  background-color: var(--bs-light);
+  font-weight: 200;
+}
+.mainContent{
+  min-height: 100vh;
+}
+.contact{
+  font-size: xx-large;
+  background-color: var(--bs-danger);
+  color: var(--bs-light);
+}
+.contact:hover{
+  background-color: var(--bs-dark);
+}
+/* BRANDS COLORS */
+.claro {
+  color: #cc2229;
+}
+.tigo {
+  color: #00377b;
+}
+.messenger {
+  color: #006AFF;
+}
+.telegram {
+  color: #0088CC;
+}
+.whatsapp {
+  color: #128C7E;
+}
+.html5{
+color: #e34c26;
+}
+.css3{
+color: #3c99dc;
+}
+.javascript{
+color: #e5a126;
+}
+.wpress{
+color: #00749c;
+}
+/* NAVBAR SCROLLED */
+.nav-scrolled{
+  background: rgba(var(--bs-light-rgb), 1);
+  transition:all .5s ease-in-out;
+}
+/* OFFCANVAS */
+.navbar-expand-lg .navbar-toggler {
+  display: inline; /*ALWAYS DISPLAY TOGGLE BUTTON*/
+}
+.offcanvas-collapse {
+  position: fixed;
+  top: 0;  /*Height of navbar */
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: #343a40;
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+}
+.offcanvas-collapse.open {
+  visibility: visible;
+  transform: translateX(-100%);
+}
+#appContact{
+  max-height: max-content;
+  min-height: 100vh;
+  background: linear-gradient(rgba(var(--bs-dark-rgb), 0.75), rgba(var(--bs-success-rgb), 0.75)), url(../img/wide/iot.webp);
+  background-size: cover;
+}
+/* Botones */
+.btn-light, .btn-light:hover{
+  background-color: var(--bs-light);
+}
+.btn-light:hover i {
+    color: #2790a5;
+}
+#appContact-btnGroup{
+  margin-left: -58px;
+  margin-top: 60px;
+}
+.btn-danger:focus,.btn-success:focus{
+  box-shadow:none;
+}
+.btn-square-md {
+    width: 100px;
+    height: 100px;
+    font-size: 3.4rem;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+.sl0{
+  background: url(../img/wide/bannerSlide0.webp);
+}
+.sl1{
+  background: url(../img/wide/bannerSlide1.webp);
+}
+.sl2{
+  background: url(../img/wide/bannerSlide2.webp);
+}
+.sl0, .sl1, .sl2{
+  background-size: cover;
+  background-position: top center;
+}
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+#jumbotron{
+  background-image: url(../img/brand/logo-sketch-paint.webp);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+}
+.rounded-5{
+  border-radius: .5rem !important;
+}
+/* EVALUAR */
+
+.modal-dialog{
+  max-width: fit-content;
+}
+.card {
+  display: flex;
+  overflow: hidden;
+  border: none;
+}
+.card img {
+  position: relative;
+  width: 100%;
+}
+.card .card-body {
+	z-index: 100;
+  position:absolute;
+  bottom: 0px;
+}
+/* Image Comparison Slider*/
+.bavertical figcaption {
+  background-color: rgba(var(--bs-light-rgb), 0.75);
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 100%;
+}
+.bavertical > figure{
+  margin: 0px;
+}
+.despues figcaption {
+  right: 1px;
+}
+/*viewport Width/Height*/
+.vh-33{
+  height: 33vh;
+}
+.bg-primary-light{
+  background-color: rgba(var(--bs-primary-rgb),.75);
+}
+.bg-danger-light{
+  background-color: rgba(var(--bs-danger-rgb),.75);
+}
+.bg-success-light{
+  background-color: rgba(var(--bs-success-rgb),.75);
+}
+.txt-light{
+  color: var(--bs-light);
+}
+.txt-success{
+  color: var(--bs-success);
+}
+.txt-danger{
+  color: var(--bs-danger);
+}
+.txt-dark{
+  color: var(--bs-dark);
+}
