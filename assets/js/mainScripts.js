@@ -1,11 +1,14 @@
 // DATE
 function updateDate() {
   let todayDate = new Date();
+  const todayMonth = new Date();
+  // Getting full month name (e.g. "September")
+  const month = todayMonth.toLocaleString('default', { month: 'long' });
 
   // return number
   let year = todayDate.getFullYear();
-  document.getElementById("year").innerHTML = year;
-  document.getElementById("year1").innerHTML = year;
+  document.getElementById("year").innerHTML = month,', ', year;
+  document.getElementById("year1").innerHTML =  month,', ', year;
 }
 updateDate();
 // OFFCANVAS
