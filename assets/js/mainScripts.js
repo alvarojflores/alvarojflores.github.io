@@ -7,8 +7,8 @@ function updateDate() {
 
   // return number
   let year = todayDate.getFullYear();
-  document.getElementById("year").innerHTML = {month,', ', year};
-  document.getElementById("year1").innerHTML =  {month,', ', year};
+  document.getElementById("year").innerHTML = (month,', ', year);
+  document.getElementById("year1").innerHTML =  (month,', ', year);
 }
 updateDate();
 // OFFCANVAS
