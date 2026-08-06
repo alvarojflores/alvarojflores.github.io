@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dewy Brew · Limpieza Capilar</title>
+    <!-- Google Fonts (estilo femenino y suave) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fef6f8;
+            color: #3d2c33;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        /* ========== PALETA ========== */
+        :root {
+            --primary: #dc97ac;
+            --primary-dark: #c47a90;
+            --primary-light: #f2d3de;
+            --primary-bg: #fef6f8;
+            --text-dark: #3d2c33;
+            --text-light: #6b4f59;
+            --white: #ffffff;
+            --shadow: 0 8px 24px rgba(220, 151, 172, 0.2);
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 12px rgba(220, 151, 172, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+            font-weight: 300;
+        }
+
+        .logo small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            margin-left: 4px;
+        }
+
+        .nav a {
+            margin-left: 1.8rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav a:hover {
+            color: var(--primary-dark);
+            border-bottom-color: var(--primary);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: linear-gradient(145deg, var(--primary-bg) 0%, #fce8ef 100%);
+            padding: 2.5rem 0 3rem;
+            border-bottom: 4px solid var(--primary-light);
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1 1 300px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text-dark);
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .hero-text h1 .highlight::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            width: 100%;
+            height: 10px;
+            background-color: var(--primary-light);
+            z-index: -1;
+            border-radius: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin: 1rem 0 1.8rem;
+            max-width: 480px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            padding: 0.9rem 2.4rem;
+            border-radius: 60px;
+            font-size: 1rem;
+            box-shadow: 0 4px 14px rgba(220, 151, 172, 0.4);
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(220, 151, 172, 0.5);
+        }
+
+        .hero-image {
+            flex: 1 1 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image .badge {
+            background: var(--white);
+            border-radius: 80px 20px 80px 20px;
+            padding: 1.8rem 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transform: rotate(-3deg);
+            border: 2px solid var(--primary-light);
+        }
+
+        .hero-image .badge h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: 2px;
+        }
+
+        .hero-image .badge p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-top: 0.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-image .badge small {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            color: #b28a96;
+            font-weight: 300;
+        }
+
+        /* ========== SECCIÓN DESCRIPCIÓN ========== */
+        .descripcion {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .desc-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .desc-text {
+            flex: 1 1 300px;
+        }
+
+        .desc-text h3 {
+            font-size: 1.7rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .desc-text p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .desc-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .desc-text ul li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            border-bottom: 1px solid #f5e3e9;
+        }
+
+        .desc-text ul li::before {
+            content: '✦';
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .desc-image {
+            flex: 1 1 260px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .desc-image .mockup {
+            background: linear-gradient(135deg, var(--primary-light), #fce8ef);
+            border-radius: 40px 12px 40px 12px;
+            padding: 2rem 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 2px solid var(--white);
+        }
+
+        .mockup .emoji-big {
+            font-size: 5rem;
+            line-height: 1;
+        }
+
+        .mockup h4 {
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .mockup p {
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        /* ========== SECCIÓN VIDEO ========== */
+        .video-section {
+            background-color: var(--primary-bg);
+        }
+
+        .video-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 4px solid var(--white);
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 420px;
+            display: block;
+            border: 0;
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 1.2rem;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* ========== SECCIÓN CONTACTOS ========== */
+        .contacto {
+            background-color: var(--white);
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-info {
+            flex: 1 1 260px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-info .detail {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .contact-info .detail span {
+            background: var(--primary-light);
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        .contact-form {
+            flex: 1 1 300px;
+            background: var(--primary-bg);
+            padding: 2rem 2rem 2.2rem;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--primary-light);
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #f0d8e0;
+            border-radius: 40px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: var(--white);
+            transition: border 0.2s;
+            margin-bottom: 1.2rem;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .contact-form textarea {
+            border-radius: 24px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form .btn-primary {
+            width: 100%;
+            text-align: center;
+            padding: 0.9rem;
+            font-size: 1.05rem;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background-color: #fceae9;
+            text-align: center;
+            padding: 1.8rem 0;
+            color: var(--text-light);
+            font-weight: 400;
+            border-top: 2px solid var(--primary-light);
+        }
+
+        footer strong {
+            color: var(--primary-dark);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem 1rem;
+            }
+            .nav a {
+                margin-left: 0;
+                font-size: 0.9rem;
+            }
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            .hero-image .badge {
+                padding: 1.2rem 1.8rem;
+            }
+            .hero-image .badge h2 {
+                font-size: 2.2rem;
+            }
+            .video-wrapper iframe {
+                height: 240px;
+            }
+            .contact-form {
+                padding: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .desc-text h3 {
+                font-size: 1.4rem;
+            }
+            .mockup .emoji-big {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                DEWY<span>BREW</span>
+                <small>hair</small>
+            </div>
+            <nav class="nav">
+                <a href="#descripcion">Producto</a>
+                <a href="#video">Video</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>
+                    Limpieza que<br />
+                    <span class="highlight">abrasa</span> tu cabello
+                </h1>
+                <p>
+                    Fórmula suave con extractos botánicos que purifica sin agredir.
+                    <strong>Dewy Brew</strong> deja tu melena luminosa, suave y con
+                    movimiento natural.
+                </p>
+                <a href="#contacto" class="btn-primary">Quiero probarlo</a>
+            </div>
+            <div class="hero-image">
+                <div class="badge">
+                    <h2>DEWY BREW</h2>
+                    <p>HAIR IS AMAZING</p>
+                    <small>✨ limpieza &amp; brillo</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DESCRIPCIÓN ===== -->
+    <section class="descripcion" id="descripcion">
+        <div class="container">
+            <h2 class="section-title">¿Qué hace especial a Dewy Brew?</h2>
+            <p class="section-sub">Un ritual de limpieza que respeta la fibra capilar</p>
+
+            <div class="desc-grid">
+                <div class="desc-text">
+                    <h3>Purifica sin resecar</h3>
+                    <p>
+                        Nuestro champú de limpieza profunda elimina impurezas, exceso de
+                        grasa y residuos de styling, pero mantiene la hidratación natural
+                        gracias a su complejo de aloe vera y aceite de jojoba.
+                    </p>
+                    <ul>
+                        <li>Fórmula vegana &amp; sin sulfatos</li>
+                        <li>Fragancia fresca con notas florales</li>
+                        <li>Apto para todo tipo de cabello</li>
+                        <li>Envase reciclable</li>
+                    </ul>
+                </div>
+                <div class="desc-image">
+                    <div class="mockup">
+                        <div class="emoji-big">💧</div>
+                        <h4>Dewy Brew</h4>
+                        <p>limpieza &bull; suavidad &bull; brillo</p>
+                        <small style="display:block; margin-top:0.5rem; color:#b28a96;">250 ml · pH balanceado</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2 class="section-title">Mira cómo transforma tu cabello</h2>
+            <p class="section-sub">Un minuto de cuidado que lo cambia todo</p>
+
+            <div class="video-wrapper">
+                <!-- Video de ejemplo (YouTube) · limpieza capilar / producto -->
+                <iframe
+                src="https://www.youtube.com/watch?v=0GRT0jP1SEM"
+                title="Dewy Brew - limpieza capilar"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="video-caption">
+            ✦ Aplica sobre el cabello húmedo, masajea suavemente y enjuaga. <br />
+            Repite si es necesario. Sigue con tu acondicionador favorito.
+        </p>
+    </div>
+</section>
+
+<!-- ===== CONTACTOS ===== -->
+<section class="contacto" id="contacto">
+    <div class="container">
+        <h2 class="section-title">¿Lista para una melena increíble?</h2>
+        <p class="section-sub">Escríbenos, te asesoramos sin compromiso</p>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Hablemos</h3>
+                <p>
+                    Déjanos un mensaje o contáctanos directamente por nuestros canales
+                    oficiales. Respondemos en menos de 24 horas.
+                </p>
+                <div class="detail">
+                    <span>📧</span> hola@dewybrew.com
+                </div>
+                <div class="detail">
+                    <span>📱</span> +505 89093624
+                </div>
+                <div class="detail">
+                    <span>📍</span> Managua, Nicaragua
+                </div>
+                <div style="margin-top:1.2rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+                    <span style="background:var(--primary-light); padding:0.2rem 1rem; border-radius:40px; font-weight:500; font-size:0.85rem; color:var(--primary-dark);">@dewybrew</span>
+                    <span style="background:var(--primary-light); padding:0.2rem 1rem; border-radius:40px; font-weight:500; font-size:0.85rem; color:var(--primary-dark);">#HairIsAmazing</span>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="contactForm">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required />
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="tú@ejemplo.com" required />
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" placeholder="Cuéntanos qué necesitas..."></textarea>
+
+                    <button type="submit" class="btn-primary">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2026 <strong>Dewy Brew</strong> · <span>Hair is Amazing</span> ·
+            Hecho con 💕 para tu cabello
+        </p>
+        <p style="font-size:0.8rem; margin-top:0.2rem; opacity:0.7;">
+            Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+<!-- ===== Pequeño script para el formulario (demo) ===== -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value.trim();
+        if (nombre) {
+            alert('¡Gracias ' + nombre + '! En breve nos pondremos en contacto contigo. 💖');
+            this.reset();
+        } else {
+            alert('Por favor, completa tu nombre.');
+        }
+    });
+</script>
+
+</body>
+</html>
