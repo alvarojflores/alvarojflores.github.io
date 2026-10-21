@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#B030CD">
+<title>¡Estás invitado! | Ana Belén</title>
+<style>
+  :root {
+    --pink:#FA57B9; --yellow:#FFE642; --teal:#44BEC7;
+    --purple:#B030CD; --mint:#EDF7F2; --ink:#24102e;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; min-height:100vh; color:var(--ink);
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    background:
+      radial-gradient(circle at 12% 12%, #fa57b955, transparent 28rem),
+      radial-gradient(circle at 90% 25%, #44bec755, transparent 25rem),
+      linear-gradient(135deg, #edf7f2 0%, #fff8fd 48%, #fff9d9 100%);
+    overflow-x:hidden;
+  }
+  .sparkle { position:fixed; z-index:-1; font-size:clamp(1rem,2vw,2rem); opacity:.55; animation:float 7s ease-in-out infinite; pointer-events:none; }
+  .s1{top:8%;left:5%;color:var(--purple)} .s2{top:22%;right:7%;color:#e84ca5;animation-delay:-2s}
+  .s3{bottom:12%;left:8%;color:#119da7;animation-delay:-4s} .s4{bottom:8%;right:9%;color:#d0ad00;animation-delay:-1s}
+  @keyframes float { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-18px) rotate(12deg)} }
+  .wrap { width:min(100% - 28px, 920px); margin:auto; padding:26px 0 38px; }
+  .hero {
+    position:relative; isolation:isolate; overflow:hidden; text-align:center;
+    padding:clamp(28px,6vw,62px) clamp(18px,5vw,54px);
+    border:2px solid #ffffffc9; border-radius:32px;
+    background:linear-gradient(140deg,#fffef4eF,#fce9f8ed 55%,#e4fbf9ed);
+    box-shadow:0 20px 60px #8e37a51c, 0 0 30px #fa57b927;
+  }
+  .hero:before { content:""; position:absolute; inset:-2px; z-index:-1; border-radius:inherit; padding:2px; background:linear-gradient(120deg,var(--pink),var(--yellow),var(--teal),var(--purple)); -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; }
+  .eyebrow { display:inline-block; padding:9px 16px; border-radius:999px; background:#b030cd12; border:1px solid #b030cd4d; color:#81249b; font-weight:900; letter-spacing:.13em; font-size:.76rem; text-transform:uppercase; }
+  h1 { margin:18px 0 4px; font-size:clamp(2.65rem,9vw,5.7rem); line-height:.98; letter-spacing:-.055em; font-weight:1000; background:linear-gradient(100deg,#d92b99 10%,#a321c1 45%,#159ca7 88%); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 4px 0 #fa57b91c); }
+  .subtitle { margin:12px 0 22px; font-size:clamp(1.05rem,3vw,1.45rem); font-weight:800; }
+  .photo-frame { width:min(100%,310px); aspect-ratio:4/4.3; margin:24px auto 28px; padding:7px; border-radius:28px; transform:rotate(-1.5deg); background:linear-gradient(135deg,var(--pink),var(--yellow),var(--teal),var(--purple)); box-shadow:0 0 0 5px #ffffffb3,0 0 28px #fa57b95c; }
+  .photo-placeholder { width:100%; height:100%; border-radius:22px; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:20px; background:linear-gradient(145deg,#fff9fd,#e8fbf7); color:#7c3988; }
+  .photo-placeholder svg { width:76px; height:76px; opacity:.8; }
+  .photo-placeholder strong { font-size:1.1rem; }
+  .photo-placeholder small { max-width:210px; line-height:1.5; color:#6f6875; }
+  .date-pill { display:inline-flex; align-items:center; gap:9px; background:var(--yellow); color:#342900; border-radius:15px; padding:12px 18px; font-weight:950; box-shadow:0 5px 0 #d6bb1a; }
+  .details { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:22px 0; text-align:left; }
+  .detail { padding:17px 15px; border:1px solid #ffffff; border-radius:18px; background:#ffffffb8; box-shadow:0 8px 24px #4920580c; }
+  .detail .icon { font-size:1.5rem; display:block; margin-bottom:8px; }
+  .detail b { display:block; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:#8b3b9c; margin-bottom:5px; }
+  .detail span { font-weight:850; line-height:1.4; }
+  .map-link { color:#087d85; text-decoration-thickness:2px; text-underline-offset:3px; }
+  .countdown-section { margin:24px auto 4px; }
+  .countdown-title { font-size:.8rem; letter-spacing:.15em; text-transform:uppercase; font-weight:950; color:#77218d; margin-bottom:12px; }
+  .countdown { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; max-width:540px; margin:auto; }
+  .time-box { padding:14px 5px 11px; border-radius:17px; color:white; background:linear-gradient(145deg,#b030cd,#7628a9); box-shadow:0 0 18px #b030cd45,inset 0 1px #ffffff65; }
+  .time-box:nth-child(2){background:linear-gradient(145deg,#fa57b9,#d92b87);box-shadow:0 0 18px #fa57b945}
+  .time-box:nth-child(3){background:linear-gradient(145deg,#44bec7,#138b9a);box-shadow:0 0 18px #44bec745}
+  .time-box:nth-child(4){background:linear-gradient(145deg,#e6c900,#b29a00);color:#332b00;box-shadow:0 0 18px #ffe64255}
+  .time-box strong { display:block; font-size:clamp(1.5rem,5vw,2.4rem); line-height:1.1; font-variant-numeric:tabular-nums; }
+  .time-box span { display:block; margin-top:5px; font-size:.68rem; font-weight:900; letter-spacing:.09em; text-transform:uppercase; }
+  .section { margin-top:24px; padding:clamp(22px,5vw,38px); border-radius:28px; background:#ffffffd9; border:1px solid #fff; box-shadow:0 16px 45px #632d7612; }
+  .section h2 { margin:0 0 8px; text-align:center; font-size:clamp(1.6rem,5vw,2.35rem); color:#8d239f; }
+  .section-intro { text-align:center; margin:0 auto 24px; max-width:520px; color:#66586c; line-height:1.55; }
+  form { display:grid; gap:16px; max-width:620px; margin:auto; }
+  label { display:block; font-weight:850; font-size:.92rem; margin-bottom:7px; }
+  input,select,textarea { width:100%; font:inherit; color:var(--ink); border:2px solid #e9d8ee; border-radius:13px; padding:13px 14px; background:#fff; outline:none; transition:border .2s,box-shadow .2s; }
+  input:focus,select:focus,textarea:focus { border-color:var(--purple); box-shadow:0 0 0 4px #b030cd19; }
+  textarea { resize:vertical; min-height:88px; }
+  .row-fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .hint { color:#786d7d; font-size:.8rem; margin-top:6px; line-height:1.4; }
+  .submit-btn { border:0; cursor:pointer; border-radius:999px; padding:16px 20px; font:inherit; font-weight:1000; font-size:1.02rem; color:#fff; background:linear-gradient(100deg,#d92b99,#a52bc4 52%,#149ca7); box-shadow:0 7px 0 #73258d,0 0 25px #b030cd3d; transition:transform .2s,filter .2s; }
+  .submit-btn:hover { transform:translateY(-2px); filter:saturate(1.15); }
+  .submit-btn:active { transform:translateY(2px); box-shadow:0 3px 0 #73258d; }
+  .privacy { font-size:.76rem; color:#756779; text-align:center; line-height:1.5; margin:0; }
+  .footer { text-align:center; padding:26px 10px 8px; color:#6c5475; font-size:.9rem; }
+  .footer strong { color:#a52bc4; }
+  .confetti { color:var(--pink); }
+  @media(max-width:620px) { .details{grid-template-columns:1fr;gap:9px}.detail{display:grid;grid-template-columns:35px 1fr;column-gap:9px;align-items:center;padding:12px 14px}.detail .icon{grid-row:span 2;margin:0}.detail b{margin:0}.row-fields{grid-template-columns:1fr}.hero{border-radius:25px}.section{border-radius:22px} }
+  @media(prefers-reduced-motion:reduce) { *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important} }
+</style>
+</head>
+<body>
+  <span class="sparkle s1" aria-hidden="true">✦</span><span class="sparkle s2" aria-hidden="true">✧</span>
+  <span class="sparkle s3" aria-hidden="true">✦</span><span class="sparkle s4" aria-hidden="true">✧</span>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="main-title">
+      <div class="eyebrow">✨ Una celebración especial ✨</div>
+      <h1 id="main-title">¡Estás invitado!</h1>
+      <p class="subtitle">Ven a celebrar el cumpleaños de</p>
+
+      <!-- FOTO: reemplaza el bloque .photo-placeholder por una etiqueta img con tu fotografía.
+           Ejemplo: <img src="ana-belen.jpg" alt="Ana Belén" style="width:100%;height:100%;object-fit:cover;border-radius:22px"> -->
+      <div class="photo-frame">
+        <div class="photo-placeholder">
+          <img src="homenajeado.jpg" alt="Foto de Ana Belén">
+        </div>
+      </div>
+      <h2 style="margin:0;color:#76228f;font-size:clamp(1.65rem,5vw,2.6rem)">Ana Belén Díaz Acosta</h2>
+      <p style="margin:8px 0 20px;font-weight:800;color:#68516f">¡Un día para brillar, reír y crear recuerdos! 💖</p>
+      <div class="date-pill">🎂 Domingo, 25 de octubre de 2026</div>
+
+      <div class="details">
+        <div class="detail"><span class="icon" aria-hidden="true">🕕</span><b>Hora</b><span>6:00 p. m.</span></div>
+        <div class="detail"><span class="icon" aria-hidden="true">📍</span><b>Lugar</b><span>Restaurante PIKNIC<br><a class="map-link" href="https://maps.app.goo.gl/skHjuUveX5sZrCNr5" target="_blank" rel="noopener noreferrer">Cómo llegar en Google Maps ↗</a></span></div>
+        <div class="detail"><span class="icon" aria-hidden="true">🎉</span><b>Invitan</b><span>Ana Belén y Familia</span></div>
+      </div>
+
+      <div class="countdown-section" aria-live="polite">
+        <div class="countdown-title">La cuenta regresiva ha comenzado</div>
+        <div class="countdown" id="countdown">
+          <div class="time-box"><strong id="days">--</strong><span>Días</span></div>
+          <div class="time-box"><strong id="hours">--</strong><span>Horas</span></div>
+          <div class="time-box"><strong id="minutes">--</strong><span>Minutos</span></div>
+          <div class="time-box"><strong id="seconds">--</strong><span>Segundos</span></div>
+        </div>
+        <p id="countdown-message" style="font-weight:800;margin:14px 0 0"></p>
+      </div>
+    </section>
+
+    <section class="section" id="confirmar">
+      <h2>💌 Confirma tu asistencia</h2>
+      <p class="section-intro">Nos encantará compartir este momento contigo. Completa los datos y envía tu respuesta por WhatsApp.</p>
+      <form id="rsvp-form">
+        <div>
+          <label for="guest-name">Tu nombre *</label>
+          <input id="guest-name" name="guest-name" autocomplete="name" placeholder="Escribe tu nombre completo" required maxlength="100">
+        </div>
+        <div class="row-fields">
+          <div>
+            <label for="attendance">¿Nos acompañarás? *</label>
+            <select id="attendance" name="attendance" required>
+              <option value="Sí, asistiré">¡Sí, ahí estaré! 🎉</option>
+              <option value="No podré asistir">No podré asistir 😔</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="note">Mensaje para Ana Belén (opcional)</label>
+          <textarea id="note" name="note" maxlength="400" placeholder="¡Un saludo, felicitación o mensaje especial!"></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Enviar confirmación por WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="privacy">Al enviar, se abrirá WhatsApp con tu respuesta preparada para enviar. No se guarda información en esta página.</p>
+      </form>
+    </section>
+    <footer class="footer">Con cariño, <strong>Ana Belén y Familia</strong> 💕<br>¡Esperamos verte ahí!</footer>
+  </main>
+<script>
+  // Fecha del evento: 25 de octubre de 2026 a las 6:00 p. m., hora de Nicaragua (UTC−6).
+  const eventDate = new Date('2026-10-25T18:00:00-06:00').getTime();
+  const countdownMessage = document.getElementById('countdown-message');
+  function updateCountdown() {
+    const remaining = eventDate - Date.now();
+    if (remaining <= 0) {
+      ['days','hours','minutes','seconds'].forEach(id => document.getElementById(id).textContent = '0');
+      countdownMessage.textContent = remaining > -86400000 ? '🎉 ¡Llegó el gran día!' : '💖 ¡Gracias por celebrar con nosotros!';
+      return;
+    }
+    document.getElementById('days').textContent = Math.floor(remaining / 86400000);
+    document.getElementById('hours').textContent = Math.floor((remaining % 86400000) / 3600000);
+    document.getElementById('minutes').textContent = Math.floor((remaining % 3600000) / 60000);
+    document.getElementById('seconds').textContent = Math.floor((remaining % 60000) / 1000);
+    countdownMessage.textContent = '¡Cada vez falta menos para celebrar! ✨';
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  document.getElementById('rsvp-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const guestName = document.getElementById('guest-name').value.trim();
+    const attendance = document.getElementById('attendance').value;
+    const note = document.getElementById('note').value.trim();
+    if (!guestName) {
+      document.getElementById('guest-name').focus();
+      return;
+    }
+    const message = [
+      '*Confirmación de cumpleaños — Ana Belén Díaz Acosta*',
+      '',
+      `Nombre: ${guestName}`,
+      `Respuesta: ${attendance}`,
+      `Mensaje: ${note}`,
+      '===',
+      'Domingo 25 de octubre de 2026 · 6:00 p. m.',
+      'Restaurante PIKNIC'
+    ].join('\n');
+
+    // El número no aparece en el contenido visual de la invitación, pero debe existir en el código
+    // para construir el enlace wa.me. Formato internacional sin +, espacios ni guiones.
+    const whatsappRecipient = '50589093624';
+    const whatsappUrl = `https://wa.me/${whatsappRecipient}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  });
+</script>
+</body>
+</html>
