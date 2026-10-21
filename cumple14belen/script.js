@@ -28,21 +28,7 @@ document.getElementById("map-embed").src =
 document.getElementById("maps-link").href = INVITATION.mapsUrl;
 
 const attendanceInputs = document.querySelectorAll('input[name="attendance"]');
-const mealInputs = document.querySelectorAll('input[name="meal"]');
-const mealFieldset = document.getElementById("meal-fieldset");
 const message = document.getElementById("form-message");
-
-function updateMealAvailability() {
-  const attendance = document.querySelector('input[name="attendance"]:checked')?.value;
-  const attending = attendance === "¡Sí, ahí estaré!";
-  mealInputs.forEach(input => {
-    input.disabled = !attending;
-    if (!attending) input.checked = false;
-  });
-  mealFieldset.style.opacity = attending ? "1" : ".58";
-}
-attendanceInputs.forEach(input => input.addEventListener("change", updateMealAvailability));
-updateMealAvailability();
 
 document.getElementById("rsvp-form").addEventListener("submit", function(event) {
   event.preventDefault();
@@ -50,15 +36,10 @@ document.getElementById("rsvp-form").addEventListener("submit", function(event) 
 
   const guestName = document.getElementById("guest-name").value.trim();
   const attendance = document.querySelector('input[name="attendance"]:checked')?.value;
-  const meal = document.querySelector('input[name="meal"]:checked')?.value || "";
   const guestNote = document.getElementById("guest-note").value.trim();
 
   if (!guestName || !attendance) {
     showMessage("Por favor, escribe tu nombre y selecciona si asistirás.");
-    return;
-  }
-  if (attendance === "¡Sí, ahí estaré!" && !meal) {
-    showMessage("¡Genial que asistirás! Selecciona también tu platillo fuerte.");
     return;
   }
   if (!/^\d{8,15}$/.test(INVITATION.whatsappNumber) || INVITATION.whatsappNumber.includes("X")) {
@@ -70,7 +51,7 @@ document.getElementById("rsvp-form").addEventListener("submit", function(event) 
     "🎉 *Confirmación de cumpleaños*",
     `*Invitado/a:* ${guestName}`,
     `*Asistencia:* ${attendance}`,
-    ...(attendance === "¡Sí, ahí estaré!" ? [`*Platillo fuerte:* ${meal}`] : []),
+    ...(attendance === "¡Sí, ahí estaré!"),
     `*Celebración:* ${INVITATION.honoreeName}`,
     `*Fecha:* ${INVITATION.eventDate}, ${INVITATION.eventTime}`,
     `*Lugar:* ${INVITATION.venueName} — ${INVITATION.venueAddress}`,
