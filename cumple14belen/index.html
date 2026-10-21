@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff6f9f">
+  <title>¡Estás invitado!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="confetti confetti-a" aria-hidden="true">✦</div>
+  <div class="confetti confetti-b" aria-hidden="true">●</div>
+  <div class="confetti confetti-c" aria-hidden="true">✿</div>
+
+  <main class="invite-shell">
+    <header class="hero">
+      <div class="pill"><span class="sparkle">✦</span> ¡Una celebración muy especial! <span class="sparkle">✦</span></div>
+      <p class="eyebrow">GUARDA LA FECHA</p>
+      <h1>¡Estás <span>invitado</span>!</h1>
+      <p class="intro">Ven a compartir una tarde llena de alegría, buenos momentos y muchas sorpresas.</p>
+
+      <div class="portrait-frame">
+        <!-- Reemplaza assets/homenajeado.jpg por la foto real del homenajeado. -->
+        <img id="honoree-photo" src="assets/homenajeado.jpg" alt="Fotografía del homenajeado"
+             onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='grid';">
+        <div id="photo-placeholder" class="photo-placeholder">
+          <span class="camera-icon">📸</span>
+          <strong>¡Aquí va la foto del homenajeado!</strong>
+          <small>Guarda su imagen como <b>homenajeado.jpg</b> en la carpeta assets.</small>
+        </div>
+        <span class="photo-sticker sticker-heart">♥</span>
+        <span class="photo-sticker sticker-star">★</span>
+      </div>
+
+      <p class="celebrating">Celebramos a</p>
+      <h2 class="honoree-name" id="honoree-name">Ana Belén Díaz Acosta</h2>
+      <div class="date-card">
+        <div class="date-icon">🎂</div>
+        <div><strong id="event-date">Domingo, 25 de octubre de 2026</strong><span id="event-time">6:00 p. m.</span></div>
+        <div class="date-divider"></div>
+        <div><strong>¡No faltes!</strong><span>Tu presencia es el mejor regalo</span></div>
+      </div>
+    </header>
+
+    <section class="details-grid" aria-label="Detalles de la celebración">
+      <article class="detail-card blue-card">
+        <div class="detail-icon">📍</div>
+        <h3>¿Dónde será?</h3>
+        <p id="venue-name">Restaurante PIKNIC</p>
+        <p class="muted" id="venue-address">Consulta la ubicación exacta en Google Maps</p>
+        <a class="text-link" id="maps-link" href="https://maps.app.goo.gl/skHjuUveX5sZrCNr5" target="_blank" rel="noopener">Abrir en Google Maps ↗</a>
+      </article>
+      <article class="detail-card green-card">
+        <div class="detail-icon">🎉</div>
+        <h3>El plan</h3>
+        <p>Buena compañía, comida deliciosa y momentos para recordar.</p>
+        <p class="muted">Ven con ganas de celebrar.</p>
+      </article>
+    </section>
+
+    <section class="map-section">
+      <div class="section-heading">
+        <span class="mini-label">ENCUÉNTRANOS</span>
+        <h2>¿Cómo llegar?</h2>
+        <p>Consulta el mapa para encontrar fácilmente el lugar de la celebración.</p>
+      </div>
+      <div class="map-frame">
+        <iframe id="map-embed" title="Mapa de ubicación del local"
+          src="https://maps.google.com/maps?q=Managua%2C%20Nicaragua&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <p class="map-note">La ubicación del mapa se puede personalizar en <code>script.js</code>.</p>
+    </section>
+
+    <section class="rsvp-section" id="confirmar">
+      <div class="section-heading">
+        <span class="mini-label">QUEREMOS CONTAR CONTIGO</span>
+        <h2>Confirma tu asistencia <span class="heading-heart">♥</span></h2>
+        <p>Completa estos datos y envía tu respuesta directamente por WhatsApp.</p>
+      </div>
+
+      <form id="rsvp-form" class="rsvp-form">
+        <label for="guest-name">Tu nombre</label>
+        <input id="guest-name" name="guestName" type="text" placeholder="Escribe tu nombre" required maxlength="80">
+
+        <fieldset>
+          <legend>¿Nos acompañarás?</legend>
+          <label class="choice"><input type="radio" name="attendance" value="¡Sí, ahí estaré!" required><span class="choice-emoji">🥳</span><span><b>¡Sí, ahí estaré!</b><small>Cuenta conmigo</small></span></label>
+          <label class="choice"><input type="radio" name="attendance" value="Lo siento, no podré asistir"><span class="choice-emoji">💌</span><span><b>No podré asistir</b><small>Gracias por invitarme</small></span></label>
+        </fieldset>
+
+        <fieldset id="meal-fieldset">
+          <legend>Elige tu platillo fuerte</legend>
+          <p class="fieldset-help">Selecciona una opción si asistirás.</p>
+          <div class="meal-options">
+            <label class="meal-option"><input type="radio" name="meal" value="Pollo"><span class="meal-emoji">🍗</span><b>Pollo</b></label>
+            <label class="meal-option"><input type="radio" name="meal" value="Res"><span class="meal-emoji">🥩</span><b>Res</b></label>
+            <label class="meal-option"><input type="radio" name="meal" value="Cerdo"><span class="meal-emoji">🍖</span><b>Cerdo</b></label>
+            <label class="meal-option"><input type="radio" name="meal" value="Marisco"><span class="meal-emoji">🦐</span><b>Marisco</b></label>
+          </div>
+        </fieldset>
+
+        <label for="guest-note">Mensaje (opcional)</label>
+        <textarea id="guest-note" name="guestNote" rows="3" placeholder="¿Quieres dejarnos un mensajito?"></textarea>
+        <button class="submit-button" type="submit"><span>Enviar confirmación por WhatsApp</span><span class="wa-icon">➤</span></button>
+        <p class="privacy-note">Al pulsar el botón, WhatsApp se abrirá con tu respuesta lista para enviar.</p>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-hearts">♥ ✦ ♥</div>
+      <p>¡Será más bonito si estás ahí!</p>
+      <small>Con cariño, <span id="host-name">Ana Belén y Familia</span></small>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
